@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
@@ -16,4 +17,29 @@ int main() {
         cin >> wyjscie;
     } while(wyjscie != 0);
     return 0;
+}
+
+void czyPierwsza () {
+    int liczba;
+    cout << "Podaj liczbe do sprawdzenia: ";
+    cin >> liczba;
+    cout << endl;
+
+    if (liczba < 1) {
+        cout << "Podano niepoprawna liczbe" << endl;
+        return;
+    } else if (liczba == 1) {
+        cout << "Liczba 1 nie jest liczba pierwsza" << endl;
+        return;
+    }
+
+    for (int i = 2; i < liczba; i++) {
+        if (liczba % i == 0) {
+            cout << "Liczba " << liczba << " nie jest liczba pierwsza" << endl;
+            return;
+        }
+    }
+
+    cout << "Liczba " << liczba << " jest liczba pierwsza" << endl;
+    return;
 }
