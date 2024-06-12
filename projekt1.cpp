@@ -12,6 +12,10 @@ int main() {
         cout << "0. Wyjscie" << endl;
         cout << "1. Silnia" << endl;
         cin >> wyjscie;
+
+        if (wyjscie == 1) {
+            silnia();
+        }
     } while(wyjscie != 0);
     return 0;
 }
