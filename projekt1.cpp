@@ -3,6 +3,8 @@
 
 using namespace std;
 
+void czyPierwsza(int);
+
 int main() {
     int a, b;
     cout << "Podaj liczbe calkowita ";
@@ -14,17 +16,18 @@ int main() {
         cout << "MENU" << endl;
         cout << "Podaj numer czynnosci, ktora chcesz wykonac" << endl;
         cout << "0. Wyjscie" << endl;
+        cout << "1. Czy pierwsza" << endl;
         cin >> wyjscie;
+
+        if (wyjscie == 1) {
+            czyPierwsza(a);
+        }
     } while(wyjscie != 0);
     return 0;
 }
 
-void czyPierwsza () {
-    int liczba;
-    cout << "Podaj liczbe do sprawdzenia: ";
-    cin >> liczba;
-    cout << endl;
-
+void czyPierwsza (int a) {
+    int liczba = a;
     if (liczba < 1) {
         cout << "Podano niepoprawna liczbe" << endl;
         return;
